@@ -1,0 +1,75 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"command": "npm",
+			"label": "ecx-debug-html5",
+			"type": "shell",
+			"args": [
+				"run-script",
+				"ecx-debug-html5:build"
+			],
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"command": "npm",
+			"label": "ecs-debug-html5",
+			"type": "shell",
+			"args": [
+				"run-script",
+				"ecs-debug-html5:build"
+			],
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe"
+			],
+			"group": "build"
+		},
+		{
+			"command": "npm",
+			"label": "ecx-native",
+			"type": "shell",
+			"args": [
+				"run-script",
+				"ecx:native:build"
+			],
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe"
+			],
+			"group": "build"
+		},
+		{
+			"command": "npm",
+			"label": "ecs-native",
+			"type": "shell",
+			"args": [
+				"run-script",
+				"ecs-native:build"
+			],
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe"
+			],
+			"group": "build"
+		},
+		{
+			"type": "Kha",
+			"target": "Debug HTML5",
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe"
+			],
+			"group": "build"
+		}
+	]
+}

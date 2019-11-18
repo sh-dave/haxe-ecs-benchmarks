@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Asteroid" package="com.sample.asteroid" version="1.0.0" company="Company Name" />
+	<app main="Main" path="bin" file="Asteroid" />
+	<window background="#000000"/>
+	
+	<source path="src" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="exp-ecs" />
+	
+	<!-- <assets path="assets" rename="assets" /> -->
+	
+	
+	<haxeflag name="-dce" value="full"/>
+	<haxeflag name="-D" value="analyzer-optimize"/>
+	
+</project>

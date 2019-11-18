@@ -1,0 +1,79 @@
+{
+	"configurations": [
+		{
+			"type": "electron",
+			"request": "launch",
+			"name": "ecx-debug-html5",
+			"appDir": "${workspaceFolder}/build/ecx-debug-html5",
+			"cwd": "${workspaceFolder}/build/ecx-debug-html5",
+			"sourceMaps": true,
+			"preLaunchTask": "ecx-debug-html5",
+			"internalConsoleOptions": "openOnSessionStart"
+		},
+		{
+			"type": "electron",
+			"request": "launch",
+			"name": "ecs-debug-html5",
+			"appDir": "${workspaceFolder}/build/ecs-debug-html5",
+			"cwd": "${workspaceFolder}/build/ecs-debug-html5",
+			"sourceMaps": true,
+			"preLaunchTask": "ecs-debug-html5",
+			"internalConsoleOptions": "openOnSessionStart"
+		},
+		{
+			"name": "ecx-native",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/ecx-native/ecs-bench",
+			"cwd": "${workspaceFolder}/build/ecx-native/",
+			"preLaunchTask": "ecx-native",
+			"logging": {
+				"programOutput": true,
+				"engineLogging": false,
+				"exceptions": true,
+				"moduleLoad": true,
+				"trace": false,
+				"traceResponse": false
+			}
+		},
+		{
+			"name": "ecs-native",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/ecs-native/ecs-bench",
+			"cwd": "${workspaceFolder}/build/ecs-native/",
+			"preLaunchTask": "ecs-native",
+			"logging": {
+				"programOutput": true,
+				"engineLogging": false,
+				"exceptions": true,
+				"moduleLoad": true,
+				"trace": false,
+				"traceResponse": false
+			}
+		},
+		{
+			"type": "fdb",
+			"request": "launch",
+			"name": "ecs-flash",
+			"program": "${workspaceFolder}/build/ecx-flash/kha.swf",
+			"preLaunchTask": "ecs-debug-html5",
+			"internalConsoleOptions": "openOnSessionStart"
+		},
+		{
+			"type": "electron",
+			"request": "launch",
+			"name": "Kha: HTML5",
+			"appDir": "${workspaceFolder}/build/debug-html5",
+			"sourceMaps": true,
+			"preLaunchTask": "Kha: Build for Debug HTML5"
+		},
+		{
+			"type": "krom",
+			"request": "launch",
+			"name": "Kha: Krom",
+			"preLaunchTask": "Kha: Build for Krom"
+		}
+	],
+	"compounds": []
+}

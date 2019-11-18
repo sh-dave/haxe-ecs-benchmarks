@@ -1,0 +1,11 @@
+{
+	"scripts": {
+		"ecx-debug-html5:build": "node Kha/make --target ecx-debug-html5",
+		"ecs-debug-html5:build": "node Kha/make --target ecs-debug-html5",
+
+		"ecx-native:build": "node Kha/make --target ecx-native --compile",
+		"ecs-native:build": "node Kha/make --target ecs-native --compile",
+
+		"ecx-flash:build": "node Kha/make --target ecx-flash"
+	}
+}

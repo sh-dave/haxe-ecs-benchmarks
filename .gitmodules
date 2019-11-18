@@ -1,0 +1,27 @@
+[submodule "Kha"]
+	path = Kha
+	url = https://github.com/Kode/Kha.git
+[submodule "libs/ecx"]
+	path = libs/ecx
+	url = https://github.com/sh-dave/ecx.git
+[submodule "libs/ecx-common"]
+	path = libs/ecx-common
+	url = https://github.com/eliasku/ecx-common.git
+[submodule "libs/exp-ecs"]
+	path = libs/exp-ecs
+	url = https://github.com/kevinresol/exp-ecs.git
+[submodule "libs/tink_core"]
+	path = libs/tink_core
+	url = https://github.com/haxetink/tink_core.git
+[submodule "libs/tink_macro"]
+	path = libs/tink_macro
+	url = https://github.com/haxetink/tink_macro.git
+[submodule "libs/tink_priority"]
+	path = libs/tink_priority
+	url = https://github.com/haxetink/tink_priority.git
+[submodule "libs/tink_state"]
+	path = libs/tink_state
+	url = https://github.com/haxetink/tink_state.git
+[submodule "libs/exp-fsm"]
+	path = libs/exp-fsm
+	url = https://github.com/kevinresol/exp-fsm.git
