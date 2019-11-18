@@ -23,7 +23,8 @@ class Renderer {
 
 	public function begin( canvas: Canvas ) {
 		final g = canvas.g4;
-		final cameraPos4 = cameraStart;//FastMatrix4.rotationY(Scheduler.time() / 4).multvec(cameraStart);
+		// final cameraPos4 = cameraStart;
+		final cameraPos4 = FastMatrix4.rotationY(Scheduler.time() / 4).multvec(cameraStart);
 		final cameraPos3 = new FastVector3(cameraPos4.x, cameraPos4.y, cameraPos4.z);
 		view.setFrom(FastMatrix4.lookAt(cameraPos3, lookAt, up));
 		vp.setFrom(projection.multmat(view));

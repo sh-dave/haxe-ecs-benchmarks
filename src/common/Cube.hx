@@ -5,7 +5,7 @@ class Cube {
 		final vertices: Array<Float>;
 		final indices: Array<Int>;
 	} {
-		final s = opts != null && opts.size != null ? opts.size : 1.0;
+		final s = opts != null && opts.size != null ? opts.size : 0.5;
 
 		return {
 			vertices: [

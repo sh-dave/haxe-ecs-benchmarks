@@ -23,8 +23,9 @@ class InstancedMeshObject {
 		this.root = root;
 	}
 
-	inline function get_m() return FastMatrix4
-		.scale(scaling.x, scaling.y, scaling.z)
+	inline function get_m() return FastMatrix4//.identity()
+		/*.multmat(FastMatrix4*/.rotation(rotation.x, rotation.y, rotation.z)/*)*/
 		.multmat(FastMatrix4.translation(position.x, position.y, position.z))
+		.multmat(FastMatrix4.scale(scaling.x, scaling.y, scaling.z))
 		;
 }

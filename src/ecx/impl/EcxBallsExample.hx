@@ -36,10 +36,10 @@ class EcxBallsExample extends System {
 		wc.add(new PulsatingColorSystem());
 		wc.add(new PulsatingScaleSystem());
 		wc.add(new TimeoutSystem());
-		wc.add(new ColliderSystem());
 		wc.add(new MovingSystem());
+		wc.add(new ColliderSystem());
 
-		ecx.Engine.createWorld(wc);
+		ecx.Engine.createWorld(wc, C.NUM_OBJECTS + 1);
 	}
 
 	var _o3d: Wire<Object3D>;
@@ -73,12 +73,13 @@ class EcxBallsExample extends System {
 
 				final e = world.create();
 				_o3d.create(e).object = inst;
-				_rotating.create(e);
+				final rot = _rotating.create(e);
+				rot.rotatingSpeed = 0.5;
 				// _pcolor.create(e).offset = i;
 				// _pscale.create(e).offset = i;
 
 				// if (Math.random() > 0.5) {
-					// _moving.create(e).offset = i;
+					_moving.create(e).offset = i;
 				// }
 
 				// _collisionable.create(e);
@@ -91,7 +92,7 @@ class EcxBallsExample extends System {
 
 // box entities
 		{
-			final cubeData = Cube.build();
+			final cubeData = Cube.build({ size: 0.15 });
 			final cube = new MeshObject(cubeData.vertices, cubeData.indices);
 			scene.meshObjects.push(cube);
 			cube.material = new Material(cube.structures);

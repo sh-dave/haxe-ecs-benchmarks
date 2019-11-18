@@ -8,13 +8,13 @@ class PulsatingColorSystem extends System {
 	var _recovering: Wire<Recovering>;
 	var _timeout: Wire<Timeout>;
 
-	var time: Wire<TimeSystem>;
+	var ts: Wire<TimeSystem>;
 
 	public function new() {
 	}
 
 	override function update() {
-		final time = time.time;
+		final time = ts.time;
 
 		for (e in objects) {
 			final o = _o3d.get(e).object;

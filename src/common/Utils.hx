@@ -1,7 +1,7 @@
 package;
 
 class Utils {
-	public static function randomSpherePoint(radius) {
+	public static function randomSpherePoint( radius ) {
 		var u = Math.random();
 		var v = Math.random();
 		var theta = 2 * Math.PI * u;
@@ -9,6 +9,6 @@ class Utils {
 		var x = radius * Math.sin(phi) * Math.cos(theta);
 		var y = radius * Math.sin(phi) * Math.sin(theta);
 		var z = radius * Math.cos(phi);
-		return {x:x,y:y,z:z};
+		return { x: x, y: y, z: z }
 	}
 }

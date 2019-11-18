@@ -25,13 +25,15 @@ class ColliderSystem extends System {
 	override function update() {
 		for (ballNode in balls) {
 			final oBall = _o3d.get(ballNode).object;
+			final mBall = oBall.m;
 
 			for (boxNode in boxes) {
 				final oBox = _o3d.get(boxNode).object;
 				final prevColliding = _colliding.has(boxNode);
 				final colliding = intersect(
-					oBall.position.x, oBall.position.y, oBall.position.z, 2,
-					oBox.position.x, oBox.position.y, oBox.position.z, 2
+					// oBall.position.x, oBall.position.y, oBall.position.z, 0.2,
+					mBall._30, mBall._31, mBall._32, 1,
+					oBox.position.x, oBox.position.y, oBox.position.z, 0.2
 				);
 
 				if (colliding) { // TODO (DK) (boundingSphereIntersects)
@@ -46,6 +48,7 @@ class ColliderSystem extends System {
 						final timeout = _timeout.create(boxNode);
 						timeout.timer = C.TIMER_TIME;
 						timeout.removeComponents = [Recovering];
+						world.commit(boxNode);
 					}
 				}
 			}
