@@ -1,20 +1,13 @@
 package impl;
 
-// import iron.object.Object;
-// import iron.Scene;
-
 class EcxBallsExample extends System {
 	public static function run() {
 		kha.System.start({}, function( _ ) {
-			new EcxBallsExample(/*scene*/);
+			new EcxBallsExample();
 		});
-
-		// BallsExampleScene.create(function( scene ) {
-		// 	new EcxBallsExample(/*scene*/);
-		// });
 	}
 
-	function new( /*scene*/ ) {
+	function new() {
 		final wc = new ecx.WorldConfig();
 		wc.add(new Collider());
 		wc.add(new Colliding());
@@ -75,14 +68,9 @@ class EcxBallsExample extends System {
 				_o3d.create(e).object = inst;
 				final rot = _rotating.create(e);
 				rot.rotatingSpeed = 0.5;
-				// _pcolor.create(e).offset = i;
-				// _pscale.create(e).offset = i;
 
-				// if (Math.random() > 0.5) {
 					_moving.create(e).offset = i;
-				// }
 
-				// _collisionable.create(e);
 				_collider.create(e);
 				world.commit(e);
 			}

@@ -36,7 +36,7 @@ class ColliderSystem extends System {
 					oBox.position.x, oBox.position.y, oBox.position.z, 0.2
 				);
 
-				if (colliding) { // TODO (DK) (boundingSphereIntersects)
+				if (colliding) {
 					if (!prevColliding) {
 						_colliding.create(boxNode);
 						world.commit(boxNode);

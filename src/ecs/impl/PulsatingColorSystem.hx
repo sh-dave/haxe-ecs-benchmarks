@@ -24,6 +24,7 @@ class PulsatingColorSystem extends System<BallsEvent> {
 				final r = Math.sin((time * 1000) / 500 + node.pulsatingColor.offset * 12) / 2 + 0.5;
 				// o.color = Color.fromFloats(r, 0, 0, 1);
 				o.color.r = r;
+				o.color.g = 0;
 			}
 		}
 	}

@@ -8,9 +8,7 @@
 - ecx
 - exp-ecs (using a renamed version (expx), as it won't even compile with hxcpp -.-)
 
-# benchmarks
-
-## javascript 0x10000 objects
+# obsolete benchmarks value
 
 ### ecx
 

@@ -6,22 +6,26 @@ class TimeoutSystem extends System<BallsEvent> {
 	override function update( dt: Float ) {
 		for (node in nodes) {
 			final timeout = node.timeout;
-			timeout.timer -= dt;
 
-			if (timeout.timer < 0) {
-				timeout.timer = 0;
+			// TODO (DK) this is cheating, but removing components during iteration doesn't seem to work and will explode
+			if (timeout.timer > 0) {
+				timeout.timer -= dt;
 
-				// for (ac in timeout.addComponents) {
-				// }
+				if (timeout.timer <= 0) {
+					timeout.timer = 0;
 
-				for (rc in timeout.removeComponents) {
-					switch rc {
-						case Recovering:
-							node.entity.remove(Recovering);
+					// for (ac in timeout.addComponents) {
+					// }
+
+					for (rc in timeout.removeComponents) {
+						switch rc {
+							case Recovering:
+								node.entity.remove(Recovering);
+						}
 					}
-				}
 
-				node.entity.remove(Timeout);
+					// node.entity.remove(Timeout);
+				}
 			}
 		}
 	}
